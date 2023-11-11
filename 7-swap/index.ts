@@ -1,7 +1,7 @@
-function swapKeysAndValues <T extends Record<string, number>> (obj: T) : Record<string, string> {
+function swapKeysAndValues <T extends Record<string, number>> (obj: T) : Record<number, string> {
     return Object.keys(obj).reduce((acc, currentKey) => {
         acc[obj[currentKey]] = currentKey;
-        return acc ;
+        return acc;
       }, {});
 }
 
