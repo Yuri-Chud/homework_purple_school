@@ -11,7 +11,7 @@ const user = {
     skils: ['TS', 'JS']
 };
 
-function pickObjectKeys<T extends {}, K extends keyof T>(obj: T, propsArr: K[]) {
+function pickObjectKeys<T extends Record<string, unknown>, K extends keyof T>(obj: T, propsArr: K[]) {
     return propsArr.reduce((o,k1) => {o[k1] = obj[k1]; return o},
     {} as T);
 }
