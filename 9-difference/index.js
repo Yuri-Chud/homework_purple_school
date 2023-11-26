@@ -9,7 +9,10 @@ function differenceInObj(AObj, BObj) {
     const keysA = Object.keys(AObj);
     const keysB = Object.keys(BObj);
     const diffKeys = keysA.filter(item => !keysB.includes(item));
-    const resObject = diffKeys.reduce((o, k) => { o[k] = AObj[k]; return o; }, {});
+    const resObject = diffKeys.reduce((o, k) => {
+        o[k] = AObj[k];
+        return o;
+    }, {});
     return resObject;
 }
 let v0 = differenceInObj(aObj, bObj);
